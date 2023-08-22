@@ -37,7 +37,8 @@ eval_image_path: '/home/ipad_ocr/yhx/CAN/datasets/CROHME/14_test_images.pkl'
 eval_label_path: '/home/ipad_ocr/yhx/CAN/datasets/CROHME/14_test_labels.txt'
 
 word_path: '/home/ipad_ocr/yhx/CAN/datasets/CROHME/words_dict.txt'
-
+len_CROHME: 986
+len_HME100K: 24,607
 # collate_fn
 collate_fn: collate_fn
 
@@ -60,7 +61,7 @@ decoder:
 
 counting_decoder:
   in_channel: 684
-  out_channel: 111
+  out_channel: 247
 
 attention:
   attention_dim: 512

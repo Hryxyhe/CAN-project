@@ -114,7 +114,7 @@ def main():
                         num_eval_samples = len(eval_loader.dataset)
                         eval_loss_avg = eval_loss_sum / dist.get_world_size()
                         eval_word_score_avg = eval_word_score_sum / dist.get_world_size()
-                        eval_exprate_avg = eval_exprate_sum /74502
+                        eval_exprate_avg = eval_exprate_sum /params['len_HME100K']
 
                         print(f'Epoch: {epoch+1} loss: {eval_loss_avg:.4f} word score: {eval_word_score_avg:.4f} ExpRate: {eval_exprate_avg:.4f}')
                         if eval_exprate_avg > min_score and dist.get_rank() == 0 and not args.check:
