@@ -1,6 +1,6 @@
 # CAN-project
 包含源码CAN ；多卡CAN_ddp； 多卡去counting模块CAN_ddp_withoutcounting三个项目<br>
-*1.数据集全在服务器上，地址是home/ipad_ocr/yhx/CAN/dataset，这里已经配置的差不多了，应该可以直接运行<br>
+* 1.数据集全在服务器上，地址是home/ipad_ocr/yhx/CAN/dataset，这里已经配置的差不多了，应该可以直接运行<br>
 * 2.多卡运行： <br>
 ```python
 CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 dist_train.py
