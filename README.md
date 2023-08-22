@@ -1,12 +1,12 @@
 # CAN-project
 包含源码CAN ；多卡CAN_ddp； 多卡去counting模块CAN_ddp_withoutcounting三个项目<br>
 1.数据集全在服务器上，地址是home/ipad_ocr/yhx/CAN/dataset，这里已经配置的差不多了，应该可以直接运行<br>
-2.多卡运行： <br>
+* 2.多卡运行： <br>
 ```python
 CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 dist_train.py
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3指定编号为1，2，3，4的四张卡（自动+1)，也可以更改<br>
-3.每次多卡运行完后运行一下下面这个指令杀死进程，不然下次运行会显示adress被占用
+* 3.每次多卡运行完后运行一下下面这个指令杀死进程，不然下次运行会显示adress被占用
 ```python
 ps -ef | grep dist_train.py | grep -v grep | awk '{print $2}' | xargs kill -9
 ```
