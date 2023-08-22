@@ -7,6 +7,7 @@
 ```python
 CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 dist_train.py
 ```
+CUDA_VISIBLE_DEVICES=0,1,2,3指定编号为1，2，3，4的四张卡（自动+1)，也可以更改
 
 3.每次多卡运行完后运行一下下面这个指令杀死进程，不然下次运行会显示adress被占用
 ```python
