@@ -17,3 +17,6 @@ ps -ef | grep dist_train.py | grep -v grep | awk '{print $2}' | xargs kill -9
   grep -v grep: 使用grep -v命令过滤掉包含"grep"的行，这样可以排除掉grep命令本身在进程列表中的信息。<br>
   awk '{print $2}': 使用awk命令提取进程列表中的第二列，即进程ID（PID）。<br>  
   xargs kill -9: 使用xargs命令将之前提取的PID作为参数传递给kill -9命令，从而终止这些进程。<br>
+
+2023/9/2
+关于ddp精度问题，尝试.contiguous()函数[[blog]](https://zhuanlan.zhihu.com/p/64551412)
